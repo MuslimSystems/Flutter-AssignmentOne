@@ -1,21 +1,20 @@
+import 'package:assigmentfour/screens/home-screen.dart';
 import 'package:flutter/material.dart';
-import 'package:my_first_app/screens/login_Screen.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatefulWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
-  State<MainApp> createState() => _MainAppState();
-}
-
-class _MainAppState extends State<MainApp> {
-   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Login()
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData.light(),
+      home: const MyHomePage(),
     );
   }
 }
